@@ -8,13 +8,11 @@
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
 
-
 for i in range(len(seq) - w + 1):
 	win = seq[i: i + w]
 	gc_count = 0
 	for c in win:
 		if c == 'C' or c == 'G': gc_count += 1
-		else				   : gc_count += 0
 	print(i, win, '%.4f' % (gc_count / w))
 
 """
